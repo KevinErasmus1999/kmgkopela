@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="400" cy="300" r="250" fill="#EBF4FF" opacity="0.5"/>
+    
+    <!-- Document Base -->
+    <path d="M300 150h200v300H300z" fill="#4299E1"/>
+    <path d="M320 170h160v260H320z" fill="white"/>
+    
+    <!-- Tax Form Lines -->
+    <rect x="340" y="200" width="120" height="4" rx="2" fill="#4299E1" opacity="0.3"/>
+    <rect x="340" y="220" width="100" height="4" rx="2" fill="#4299E1" opacity="0.3"/>
+    <rect x="340" y="240" width="110" height="4" rx="2" fill="#4299E1" opacity="0.3"/>
+    
+    <!-- Calculator Elements -->
+    <rect x="340" y="280" width="120" height="80" rx="8" fill="#4299E1"/>
+    <rect x="350" y="290" width="100" height="20" rx="4" fill="white"/>
+    <rect x="350" y="320" width="30" height="30" rx="4" fill="white"/>
+    <rect x="390" y="320" width="30" height="30" rx="4" fill="white"/>
+    <rect x="430" y="320" width="30" height="30" rx="4" fill="white"/>
+    
+    <!-- Percentage Symbol -->
+    <text x="380" y="390" font-family="Arial" font-size="40" font-weight="bold" fill="#4299E1">%</text>
+    
+    <!-- Dollar Signs -->
+    <text x="350" y="200" font-family="Arial" font-size="24" font-weight="bold" fill="#4299E1">$</text>
+    <text x="420" y="200" font-family="Arial" font-size="24" font-weight="bold" fill="#4299E1">$</text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="350" y="450" r="8" fill="#4299E1" opacity="0.6"/>
+    <circle cx="380" y="450" r="8" fill="#4299E1" opacity="0.6"/>
+    <circle cx="410" y="450" r="8" fill="#4299E1" opacity="0.6"/>
+    
+    <!-- Abstract Lines -->
+    <path d="M500 200c30 0 50 20 50 50" stroke="#4299E1" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+    <path d="M500 250c30 0 50 20 50 50" stroke="#4299E1" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+    <path d="M500 300c30 0 50 20 50 50" stroke="#4299E1" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+</svg>

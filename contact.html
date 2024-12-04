@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KMG Kopela Trading Enterprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2C5282', // Deep professional blue
+                            light: '#3182CE',
+                            dark: '#1A365D'
+                        },
+                        secondary: {
+                            DEFAULT: '#38A169', // Professional green
+                            light: '#48BB78',
+                            dark: '#276749'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(to right, #2C5282, #3182CE)',
+                        'gradient-secondary': 'linear-gradient(to right, #38A169, #48BB78)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                
+                fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        successMessage.classList.remove('hidden');
+                        form.reset();
+                        setTimeout(() => {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                    } else {
+                        throw new Error('Failed to send message');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img class="h-12 w-auto" src="images/logo.png" alt="KMG Kopela Logo">
+                        <span class="ml-3 text-xl font-semibold text-primary">KMG Kopela Trading Enterprise</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                    <a href="team.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
+                    <a href="contact.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="team.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Our Team</a>
+                <a href="contact.html" class="text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-gradient-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Contact Us</h1>
+            <p class="text-xl text-white opacity-90">Get in touch with our team of experts</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                        <p class="text-lg text-gray-600">
+                            We're here to help you with any questions about our services. Reach out to us and we'll respond as soon as we can.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Our Office</h3>
+                                <p class="text-gray-600 mt-1">
+                                    411 Boom Street, 4th Floor<br>
+                                    Vanell Building<br>
+                                    Klerksdorp, 2570
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-lg">
+                                <i class="fas fa-phone text-xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Phone</h3>
+                                <p class="text-gray-600 mt-1">
+                                    <a href="tel:0730413614" class="hover:text-primary transition-colors">073 041 3614</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Email</h3>
+                                <p class="text-gray-600 mt-1">
+                                    <a href="mailto:admin@kmgkte.co.za" class="hover:text-primary transition-colors">admin@kmgkte.co.za</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/kmgkopelatradingenterprise.co.za?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/k-m-g-kopela-trading-enterprise/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@kgkopelatrading?_t=8rw7SRjVQSG&_r=1" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://youtube.com/@_kmgkopelatradingenterprise?si=szbtSWOg45nXonZ0" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://serv.co.za/klerksdorp/accountants/kmg-kopela-trading-enterprise" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-500 hover:shadow-xl">
+                    <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
+                        <span class="block sm:inline">Your message has been sent successfully!</span>
+                    </div>
+                    <form id="contactForm" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="Your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="Your phone number">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="What is this regarding?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="Your message here..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1176359992546!2d26.662780726469368!3d-26.868003391339176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e96f120bd140a0f%3A0xed870cf99b53453e!2sK%20M%20G%20KOPELA%20TRADING%20ENTERPRISE!5e0!3m2!1sen!2sza!4v1733318724599!5m2!1sen!2sza" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+ <footer class="bg-gray-900 text-white">
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <img class="h-10 w-auto" src="images/logo.png" alt="KMG Kopela Logo">
+                    <span class="ml-2 text-lg font-semibold">KMG Kopela</span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Empowering businesses through professional financial services and expert guidance.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.facebook.com/kmgkopelatradingenterprise.co.za?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="hover:text-primary-dark transition-colors">
+                        <i class="fab fa-facebook-f text-xl text-primary"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/k-m-g-kopela-trading-enterprise/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-dark transition-colors">
+                        <i class="fab fa-linkedin-in text-xl text-primary"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kgkopelatrading?_t=8rw7SRjVQSG&_r=1" target="_blank" rel="noopener noreferrer" class="hover:text-primary-dark transition-colors">
+                        <i class="fab fa-tiktok text-xl text-primary"></i>
+                    </a>
+                    <a href="https://youtube.com/@_kmgkopelatradingenterprise?si=szbtSWOg45nXonZ0" target="_blank" rel="noopener noreferrer" class="hover:text-primary-dark transition-colors">
+                        <i class="fab fa-youtube text-xl text-primary"></i>
+                    </a>
+                    <a href="https://serv.co.za/klerksdorp/accountants/kmg-kopela-trading-enterprise" target="_blank" rel="noopener noreferrer" class="hover:text-primary-dark transition-colors">
+                        <i class="fas fa-globe text-xl text-primary"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="services.html#accounting" class="text-gray-400 hover:text-white transition-colors">Accounting & Bookkeeping</a></li>
+                    <li><a href="services.html#consulting" class="text-gray-400 hover:text-white transition-colors">Business Consulting</a></li>
+                    <li><a href="services.html#tax" class="text-gray-400 hover:text-white transition-colors">Tax Services</a></li>
+                    <li><a href="services.html#compliance" class="text-gray-400 hover:text-white transition-colors">Compliance Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-primary"></i>
+                        <span class="text-gray-400">411 Boom Street, 4th Floor<br>Vanell Building<br>Klerksdorp, 2570</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-primary"></i>
+                        <a href="tel:+27137527843" class="text-gray-400 hover:text-white transition-colors">+27 13 752 7843</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-primary"></i>
+                        <a href="mailto:admin@kmgkte.co.za" class="text-gray-400 hover:text-white transition-colors">admin@kmgkte.co.za</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="text-sm text-gray-400">
+                    &copy; 2024 KMG Kopela Trading Enterprise. All rights reserved.
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6 text-sm text-gray-400">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

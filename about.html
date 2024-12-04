@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - KMG Kopela Trading Enterprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2C5282', // Deep professional blue
+                            light: '#3182CE',
+                            dark: '#1A365D'
+                        },
+                        secondary: {
+                            DEFAULT: '#38A169', // Professional green
+                            light: '#48BB78',
+                            dark: '#276749'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(to right, #2C5282, #3182CE)',
+                        'gradient-secondary': 'linear-gradient(to right, #38A169, #48BB78)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img class="h-12 w-auto" src="images/logo.png" alt="KMG Kopela Logo">
+                        <span class="ml-3 text-xl font-semibold text-primary">KMG Kopela Trading Enterprise</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="about.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                    <a href="team.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="about.html" class="text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="team.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Our Team</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-gradient-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">About Us</h1>
+            <p class="text-xl text-white opacity-90">Learn about our mission and values</p>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="relative bg-gray-50 overflow-hidden pt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                        Empowering Your Financial Success
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        At KMG Kopela, we're more than just financial advisors. We're your partners in growth, 
+                        committed to helping you navigate the complex world of finance with confidence and clarity.
+                    </p>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="images/about-main.svg" alt="KMG Kopela About Illustration" class="w-full max-w-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission & Vision Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-blue-50 p-8 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-700">
+                        To empower SMMEs and individuals with expert financial guidance, innovative solutions, 
+                        and personalized service that drives sustainable growth and success.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-700">
+                        To be the leading financial services provider that transforms businesses through 
+                        excellence, innovation, and unwavering commitment to client success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Core Values</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 101.415 1.415l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Integrity</h3>
+                    <p class="text-gray-600 text-center">We uphold the highest standards of honesty and ethical conduct</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Client Focus</h3>
+                    <p class="text-gray-600 text-center">Your success is our priority</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Excellence</h3>
+                    <p class="text-gray-600 text-center">We strive for excellence in everything we do</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M11 3a1 1 0 11-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Innovation</h3>
+                    <p class="text-gray-600 text-center">We embrace new ideas and creative solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gradient-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Work Together?</h2>
+            <p class="text-xl text-white opacity-90 mb-8">Let's discuss how we can help your business succeed.</p>
+            <a href="contact.html" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+ <footer class="bg-gray-900 text-white">
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <img class="h-10 w-auto" src="images/logo.png" alt="KMG Kopela Logo">
+                    <span class="ml-2 text-lg font-semibold">KMG Kopela</span>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Empowering businesses through professional financial services and expert guidance.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/kmgkopelatradingenterprise.co.za?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/k-m-g-kopela-trading-enterprise/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kgkopelatrading?_t=8rw7SRjVQSG&_r=1" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://youtube.com/@_kmgkopelatradingenterprise?si=szbtSWOg45nXonZ0" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://serv.co.za/klerksdorp/accountants/kmg-kopela-trading-enterprise" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark transition-colors">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="services.html#accounting" class="text-gray-400 hover:text-white transition-colors">Accounting & Bookkeeping</a></li>
+                    <li><a href="services.html#consulting" class="text-gray-400 hover:text-white transition-colors">Business Consulting</a></li>
+                    <li><a href="services.html#tax" class="text-gray-400 hover:text-white transition-colors">Tax Services</a></li>
+                    <li><a href="services.html#compliance" class="text-gray-400 hover:text-white transition-colors">Compliance Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-primary"></i>
+                        <span class="text-gray-400">411 Boom Street, 4th Floor<br>Vanell Building<br>Klerksdorp, 2570</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-primary"></i>
+                        <a href="tel:+27137527843" class="text-gray-400 hover:text-white transition-colors">+27 13 752 7843</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-primary"></i>
+                        <a href="mailto:admin@kmgkte.co.za" class="text-gray-400 hover:text-white transition-colors">admin@kmgkte.co.za</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="text-sm text-gray-400">
+                    &copy; 2024 KMG Kopela Trading Enterprise. All rights reserved.
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6 text-sm text-gray-400">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
