@@ -32,12 +32,57 @@
                 }
             }
         }
+
+        // Disclaimer Modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('disclaimerModal');
+            const closeBtn = document.getElementById('closeDisclaimer');
+            const acceptBtn = document.getElementById('acceptDisclaimer');
+
+            // Show modal if not previously accepted
+            if (!localStorage.getItem('disclaimerAccepted')) {
+                modal.classList.remove('hidden');
+            }
+
+            // Close modal and set localStorage on accept
+            acceptBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                localStorage.setItem('disclaimerAccepted', 'true');
+            });
+
+            // Close modal on X button click
+            closeBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                localStorage.setItem('disclaimerAccepted', 'true');
+            });
+        });
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="js/main.js" defer></script>
     <script src="js/animations.js" defer></script>
 </head>
 <body class="bg-gray-50">
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Disclaimer</h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500">
+                        The information on the website is provided "as is" and is not guaranteed to be accurate, complete, or timely. KMG-KTE is not responsible for any errors or omissions, or for the results of using the information.
+                    </p>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="acceptDisclaimer" class="px-4 py-2 bg-primary text-white text-base font-medium rounded-md shadow-sm hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary">
+                        Accept
+                    </button>
+                    <button id="closeDisclaimer" class="ml-3 px-4 py-2 bg-gray-100 text-gray-700 text-base font-medium rounded-md shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,6 +337,8 @@
                     <li><a href="services.html#consulting" class="text-gray-400 hover:text-white transition-colors">Business Consulting</a></li>
                     <li><a href="services.html#tax" class="text-gray-400 hover:text-white transition-colors">Tax Services</a></li>
                     <li><a href="services.html#compliance" class="text-gray-400 hover:text-white transition-colors">Compliance Services</a></li>
+                    <li><a href="services.html#schools" class="text-gray-400 hover:text-white transition-colors">Schools Financial Services</a></li>
+                    <li><a href="services.html#certification" class="text-gray-400 hover:text-white transition-colors">Business Certification & Accreditation</a></li>
                 </ul>
             </div>
 
@@ -305,7 +352,7 @@
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-phone mr-3 text-primary"></i>
-                        <a href="tel:+27137527843" class="text-gray-400 hover:text-white transition-colors">+27 13 752 7843</a>
+                        <a href="tel:0730413614" class="text-gray-400 hover:text-white transition-colors">073 041 3614</a>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-envelope mr-3 text-primary"></i>
@@ -319,16 +366,13 @@
     <!-- Bottom Footer -->
     <div class="border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div class="md:flex md:items-center md:justify-between">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div class="text-sm text-gray-400">
                     &copy; 2024 KMG Kopela Trading Enterprise. All rights reserved.
                 </div>
-                <div class="mt-4 md:mt-0">
-                    <ul class="flex space-x-6 text-sm text-gray-400">
-                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
-                    </ul>
+                <div class="flex space-x-6 text-sm text-gray-400">
+                    <a href="terms-and-conditions.html" class="hover:text-white">Terms & Conditions</a>
+                    <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
                 </div>
             </div>
         </div>

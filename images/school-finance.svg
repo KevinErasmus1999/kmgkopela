@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Circle -->
+        <circle fill="#EBF4FF" cx="400" cy="300" r="250"/>
+        
+        <!-- School Building Base -->
+        <path d="M250 350 L550 350 L530 450 L270 450 Z" fill="#2C5282"/>
+        
+        <!-- School Building Main -->
+        <rect x="280" y="200" width="240" height="150" fill="#3182CE"/>
+        
+        <!-- Roof -->
+        <path d="M250 200 L400 100 L550 200 Z" fill="#2C5282"/>
+        
+        <!-- Windows -->
+        <rect x="310" y="230" width="40" height="60" fill="#EBF4FF"/>
+        <rect x="380" y="230" width="40" height="60" fill="#EBF4FF"/>
+        <rect x="450" y="230" width="40" height="60" fill="#EBF4FF"/>
+        
+        <!-- Door -->
+        <rect x="380" y="320" width="40" height="70" fill="#2C5282"/>
+        
+        <!-- Financial Elements -->
+        <circle cx="180" cy="200" r="30" fill="#38A169" opacity="0.9"/>
+        <circle cx="620" cy="200" r="30" fill="#38A169" opacity="0.9"/>
+        
+        <!-- Calculator/Book Icon -->
+        <rect x="150" y="180" width="60" height="40" rx="5" fill="#2C5282"/>
+        <rect x="590" y="180" width="60" height="40" rx="5" fill="#2C5282"/>
+        
+        <!-- Steps -->
+        <rect x="350" y="390" width="100" height="10" fill="#EBF4FF"/>
+    </g>
+</svg>
